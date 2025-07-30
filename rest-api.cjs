@@ -27,6 +27,17 @@ app.get("/get-participators", (req, res) => {
             res.status(500).send("Error connecting to database.");
         });
 });
+app.get("/", (req, res) => {
+     res.send("<h1>Hello World, Welcome to home Rout</h1>");
+    // MongoClient.connect(conString)
+    //     .then(()=> {
+    //         res.send("<h1>Hello World, Welcome to home Rout</h1>");
+    //     })
+    //     .catch(err => {
+    //         console.error("MongoDB Error:", err);
+    //         res.status(500).send("Error connecting to database.");
+    //     });
+});
 
 // 🔵 POST: Add a participator
 app.post("/add-participator", (req, res) => {
